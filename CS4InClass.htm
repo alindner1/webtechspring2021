@@ -8,6 +8,31 @@
 
 	<style>
 	/* Your styles go here */
+    
+    p, h1{
+        text-align: center;
+        color:pink;
+    }
+    body {
+        background-image: url(plant\ theme\ background.jpg);
+        background-position: center;
+        background-repeat: repeat;
+        background-attachment: fixed;
+    }
+    img#b {
+        position:absolute;
+        top: 500px;
+        left: 200px;
+        opacity: 0.5;
+    }
+    h3{
+        color: yellow;
+        font-style: italic;
+        position: absolute;
+        top:500px;
+        left:200px;
+        z-index:1;
+    }
 	</style>
 	
 	<script>
@@ -19,12 +44,15 @@
   <body>
 	<!-- Your HTML goes here -->
     <h1> Image Hot Spots</h1>
+    <p>
     <map name="middlesex" id = "midx">
         <area shape = "rect" coords="301, 351, 330, 383" href="http://www.wellesleyma.gov" alt="Town of Wellesley"/>
         <area shape = "rect" coords="338, 314, 360, 373" href="http://www.newtonma.gov" alt="Town of Newton"/>
 
     </map>
 	<img src="Middlesex.gif" alt="Map of Middlesex" title="Middlesex Map" usemap= "#middlesex"/>
-	
-  </body>
+    </p>
+    <img id="b" src="beaver.jpg" alt="Babson Beaver" title= "go Babo"/>
+    <h3> Go Beavers</h3>
+</body>
 </html>
