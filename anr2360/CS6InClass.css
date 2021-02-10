@@ -1,0 +1,34 @@
+table {
+    border:2px solid black;
+    font-family: Arial;
+    color: navy;
+    width: 50%;
+    margin-right:auto;
+    margin-left:auto;
+    background: url(music.gif) fixed repeat center;
+    border-collapse: collapse;
+}
+td {
+    border:2px solid black;
+    text-align:center;
+}
+tr#top {
+    background-color: yellow;
+    font-style: bold;
+}
+.first {
+    width: 35%;
+}
+.second {
+    width: 45%;
+}
+.third {
+    width: 20%; /*don't have to set this bc last one is automatic */
+}
+caption {
+    font-family: Arial;
+    text-align: center;
+    color: navy;
+    margin-bottom: 50px;
+
+}
