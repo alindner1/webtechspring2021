@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>CS8 In Class - Forms/Styles</title>
+
+	<style>
+    /* Your styles go here */
+    body{
+        color:navy;
+        font-family: Arial;
+        background-color: white;
+    }
+    header {
+        color:navy;
+        font-family:arial;
+        text-align:center;
+    }
+    form {
+        margin-left: 200px;
+        margin-right:200px;
+        padding-left:50px;
+        padding-top:50px;
+        padding-bottom:50px;
+        font-family: arial;
+        color:navy;
+        background-color: silver;
+    }
+	</style>
+	
+	<script>
+	/* Your JavaScript goes here */
+	  
+	</script>
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+  
+    <header>
+        <h1>Simple HTML Form</h1>   
+    </header>
+    <form>
+        <p>First name:
+            <input type="text" name="firstname" maxlength="100" size="20" value= "Enter first name here" />
+        </p>
+        <p>Last name:
+            <input type="text" name="lastname" maxlength="100" size="20" value= "Enter last name here" />
+        </p>
+        <p>Age:
+            <input type="text" name="age" maxlength="3" size="20" value= "Enter age here" />
+        <p>Please select your gender:
+            Male <input type="radio" name="gender" value="male" />
+            Female <input type="radio" name="gender" value="female" checked="checked" />
+        </p>
+        <p>Which topic in Web Tech do you like (please select all that apply):
+            <br>
+            <input type="checkbox" name="topic" value = "HTML"/>
+            HTML<br/>
+            <input type="checkbox" name="topic" value = "CSS"/>
+            CSS<br/>   
+            <input type="checkbox" name="topic" value = "JavaScript"/>
+            JavaScript<br/>
+            <input type="checkbox" name="topic" value = "jQuery"/>
+            JQuery<br/>
+
+        </p>
+        <p>Please provide any additional comments you might have:
+            <br>
+        <textarea name="comments" rows="5" cols="50">
+
+            </textarea>
+        </p>
+        <p>
+          Which New England state do you belong to:
+          <select name="state">
+              <option value=""> Select A State</option>
+              <option value="Massachusetts"> Massachusetts</option>
+              <option value="Maine"> Maine</option>
+              <option value="Rhode Island"> Rhode Island</option>
+              <option value="Vermont"> Vermont</option>
+              <option value="Connecticut"> Connecticut</option>
+              <option value="New Hampshire"> New Hampshire</option>
+
+
+
+            </select>  
+        </p>
+        <p>
+        <input type="submit" value="Submit" name="Submit"/>
+        <input type="reset" value="Reset" name="Reset"/>
+        </p>
+    </form>
+	
+  </body>
+</html>
