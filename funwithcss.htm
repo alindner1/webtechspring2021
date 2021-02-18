@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Fun CSS Stuff</title>
+
+	<style>
+	/* Your styles go here */
+    a {
+        text-decoration: none;
+    }
+    a:hover{
+        background-color: lime;
+    }
+    img#one {
+        display: block;
+    }
+    img#two{
+       /* width:40%;
+        border-radius: 20%;
+        display: block;
+        margin: auto;*/
+        width:40% 
+    }
+    img#two:hover{
+       /* transform:scaleY(-1);*/ 
+      /* border:5px ridge red;*/
+      /*box-shadow: 20px 20px 0 0 magenta;*/
+    }
+    .container{
+        position:relative;
+        width:40%;
+        margin:auto;
+    }
+    img#daimg {
+        width:100%
+        display: block;
+        height:auto;
+    }
+    .curtain{
+        position: absolute;
+        left:0%;
+        right:0%;
+        top:0%;
+        background-color: silver;
+        overflow: hidden;
+        width:100%;
+        height:0%;
+        transition: 5s ease;
+    }
+    .words{
+        color:navy;
+        font-size:16px;
+        position:absolute;
+        top: 50%;
+        left:10%;
+        overflow:hidden;
+        transition: translate(-50%,-50%);
+    }
+    .container:hover, .curtain:hover{bottom:0%;height:0%;
+    }
+	</style>
+	
+	<script>
+	/* Your JavaScript goes here */
+	  
+	</script>
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+	<h3> Using Hover for dynamic changes to using CSS</h3>
+	<a href="http:/www.babson.edu"> Link to Babson</a> &nbsp; &nbsp; &nbsp;
+	<a href="http://www.amazon/com"> Link to Amazon</a> &nbsp; &nbsp; &nbsp;
+	<a href="http:/www.newtonma.gov"> Link to Garden City</a>
+	<hr/>
+    <h3> Understanding display property of CSS</h3>
+    Andrea
+    <img id="one" src="beaver.jpg" alt="Beaver Image" title="go beavs"/>
+    Prof
+	<hr/>
+    <img id="two" src="tiger5.jpg" alt="Tiger Image" title="Tiger King" >
+	
+    <hr/>
+    <div class="container">
+    <img id="daimg" src="photo.JPG" alt="sunset photo" title= "sunset by shankar"/>
+    <div class="curtain">
+        <div class="words">
+        <h3> This is a photo shot by shankar as he was skiing down a slope.</h3>
+</div>  
+</div>  
+</div>  
+</body>
+</html>
