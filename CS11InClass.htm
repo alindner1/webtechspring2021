@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+
+<html> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>CS11 - Practicing Javascript</title>
+
+	<style type="text/css">
+	h1 {font-weight:bold; background-color: Silver;}
+	p {text-align:center;}
+  img#first {border:10px solid black; }
+	</style>
+	    
+	<script type="text/javascript">
+    function changeTitle()
+    {
+        document.getElementById("one").innerHTML= "I changed the title!";
+
+    }
+    function changeColor()
+    {
+        document.getElementById("two").style.backgroundColor= "yellow";
+
+    }
+    function changeColorBack()
+    {
+      document.getElementById("two").style.backgroundColor= "white";
+
+    }
+    function showVar()
+    {
+        var x;
+        var y;
+        x=50;
+        y=75;
+        alert (x);
+        alert (y);
+        alert (x+ y);
+        alert (x-y);
+        alert (x*y);
+        alert (x/y);
+        x = "Shankar";
+        y = " is the greatest dude on earth!";
+        alert(x+y);
+        x = 20;
+        y = "50";
+        alert(x+y);
+    } 
+    function addBorder()
+    {
+      document.getElementById("four").style.borderWidth= "15 px";
+      document.getElementById("four").style.border= "solid";
+
+    } 
+
+    function deleteBorder()
+    {
+      document.getElementById("four").style.border= "none";
+      document.getElementById("four").style.borderWidth= "0 px";
+
+    } 
+	</script>
+  </head>
+
+  <body>
+    <hr/>
+	<h1 id= "one"> Practice with Javascript</h1>
+    <hr/>
+    <p>
+        <button onclick="changeTitle()">Click To Change Title</button>
+    </p>
+    <hr />
+   	<h1> More practice with Javascript </h1>
+    <p style="border:3px solid red" id="two" onmouseover="changeColor()" onmouseout="changeColorBack()"> Mouse over me to change my color </p>
+    
+    <hr/>
+    <h1> Understanding Variables in Javascript </h1>
+    <p>
+    	<button id="three" onclick="showVar()"> Click on me to start </button>
+    </p>
+    <p> 
+      <img id = "four" onclick="addBorder()" ondblclick="deleteBorder()" src="beaver.jpg" alt="beaver" title= "Go Beavs" />
+    </p>
+  </body>
+</html>
