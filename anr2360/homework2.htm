@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Lindner Homework 2</title>
+
+	<style>
+	/* Your styles go here */
+		form{
+
+			margin-left: 200px;
+			margin-right: 200px;
+			margin-top: 40px;
+			margin-bottom:20px;
+		}
+		table {
+			border:2px solid black;
+			font-family: Arial;
+			font-size: 20px;
+			text-align: center;
+			width: 60%;
+			margin-right:auto;
+			margin-left:auto;
+		}
+		table img{
+			width:45%
+		}
+		.first {
+			width:35%;
+		}
+		.second {
+			width:25%;
+		}
+		.third {
+			width:20%;
+		}
+		.forth {
+			width:20%;
+		}
+		form p#buttons{
+			margin-left: auto;
+			margin-right:auto;
+			height: 30px;
+			text-align: center;
+		}
+		.yellow {
+			background-color: yellow;
+		}
+		.green {
+			background-color: green;
+		}
+		table caption{
+			font-family:"Lucida Grande";
+			font-size: 2em;
+			color: navy;
+			font-style: bold;
+			margin-bottom: 20px;
+		}
+		div#form {
+			background-image: url(brick.gif);
+			margin-top:40px;
+			margin-bottom:40px;
+		}
+		tr {
+			border:2px solid black;
+		}
+		td {
+			border:2px solid black;
+
+		}
+	</style>
+	
+	<script>
+	/* Your JavaScript goes here */
+	  
+	</script>
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+	<div id="form">
+		<form>
+			<table>
+				<caption>
+					Catalog of Sweaters
+				</caption>
+				<tr> 
+					<td class="first">Product Image</td>
+					<td class="second">Product Price</td>
+					<td class="third">Product Selection</td>
+					<td class="forth">Product Quantity</td>
+				</tr>
+					<td class="first"><img src="redsweater.jpg" alt="Red Sweater" Title="Red Sweater"></td>
+					<td class="second">$35.00</td>
+					<td class="third">
+						<p>
+							<input type="radio" name="sweater" value="Red Sweater"/>
+							Red Sweater
+						</p>
+					</td>
+					<td class="forth">
+						<p>
+							Quantity:
+							<input type="text" name="redQuant" maxlength="4" size="4" value= " " />
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<td class="first"><img src="bluesweater.jpg" alt="Blue Sweater" Title="Blue Sweater"></td>
+					<td class="second">$45.00</td>
+					<td class="third">
+						<p>
+						<input type="radio" name="sweater" value="Blue Sweater"/>
+						Blue Sweater
+						</p>
+					</td>
+					<td class="forth">
+						<p>
+							Quantity:
+							<input type="text" name="blueQuant" maxlength="4" size="20" value= " " />
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<td class="first"><img src="whitesweater.jpg" alt="White Sweater" Title="White Sweater"></td>
+					<td class="second">$30.00</td>
+					<td class="third">
+						<p>
+							<input type="radio" name="sweater" value="White Sweater"/>
+							White Sweater
+						</p>
+					</td>
+					<td class="forth">
+						
+						<p>Quantity:
+						<input type="text" name="whiteQuant" maxlength="4" size="20" value= " " />
+						</p>
+					</td>
+				</tr>
+			</table>
+			<p id="buttons">
+				<input class="green" type="submit" value="Submit Selections" name="Submit Selections"/>	
+				<input class="yellow" type="reset" value="Clear Selections" name="Clear Selections"/>
+			</p>
+		</form>
+	</div>
+	
+  </body>
+</html>

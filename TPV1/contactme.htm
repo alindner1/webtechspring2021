@@ -98,6 +98,10 @@
 			text-align: center;
 			margin:auto;		
 		}
+		h1 {
+			text-align: center;
+			color: darkblue;
+		}
 	</style>
 	
 	<script>
@@ -125,7 +129,9 @@
 		<a href="credits.htm">Credits</a>
 
 	</div>
-	
+	<h1>
+		Contact Me!
+	</h1>
 	<p>
 		I’m pretty famous, so I don’t have a personal contact line. 
 		<br>
@@ -138,7 +144,7 @@
 	</p>
 	<p id="form" > <strong>Fill out the form below to contact Andrea. </strong></p>
 	<br>
-	<form>
+	<form action="mailer.php" method="POST">
 		<br>
         <p id="form">First name:
             <input type="text" name="firstname" maxlength="100" size="20" value= "Enter first name here" />
