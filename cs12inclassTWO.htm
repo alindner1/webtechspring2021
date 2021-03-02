@@ -3,7 +3,7 @@
     <head>
 
 	    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
-	    <title>Please change the title  </title>
+	    <title>Class 12/13  </title>
         <!-- Don't worry about the styles. I just added them to make the page look better -->
         <style type="text/css">
             h1 {
@@ -24,32 +24,49 @@
                 myimage = document.getElementById("daimage");
                 myinput = prompt("Please enter a number one of maple, shamrock, thyme, or clover.");
                 alert(myinput)
-                if (myinput == "maple")
+                if (myinput.toLowerCase() == "maple")
                 {
                 myimage.src = "maple.jpg";
                 myimage.title = "Magestic maple";
                 myimage.alt= "image of maple leaf";
                 }    
-                if (myinput == "clove")
+                if (myinput.toLowerCase() == "clove")
                 {
                 myimage.src = "clove.jpg";
                 myimage.title = "Magestic clove";
                 myimage.alt= "image of clove leaf";
                 }    
-                if (myinput == "thyme")
+                if (myinput.toLowerCase() == "thyme")
                 {
                 myimage.src = "thyme.jpg";
                 myimage.title = "Magestic thyme";
                 myimage.alt= "image of thyme";
                 } 
-                if (myinput == "shamrock")
+                if (myinput.toLowerCase() == "shamrock")
                 {
                 myimage.src = "shamrock.jpg";
                 myimage.title = "Magestic shamrock";
                 myimage.alt= "image of shamrock leaf";
-                }       
+                } 
+                else { 
+                    myinput = prompt("Please enter a number one of maple, shamrock, thyme, or clover.");
+                    alert(myinput)
+                }      
             }     
-        
+        function changetoship(){
+            var myimage;
+            myimage = document.getElementById("changetoships");
+            if(myimage.src.match("planes")=="planes"){
+                myimage.src = "ships.jpg";
+                myimage.title = "Magestic ship";
+                myimage.alt= "image of ship"; 
+            }
+            else{
+                myimage.src = "planes.jpg";
+                myimage.title = "Magestic planes";
+                myimage.alt= "image of planes"; 
+            }
+        }
            
         </script>
         
@@ -82,7 +99,7 @@
             other image. The ALT and TITLE must change appropriately.
         </p></div>
         <div>
-            <img src="planes.jpg" alt="Planes" title="Flying High" width="200"/>
+            <img id="changetoships"  onclick="changetoship()"  src="planes.jpg"  alt="Planes" title="Flying High" width="200"/>
         </div>
     
     </body>
