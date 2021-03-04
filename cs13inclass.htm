@@ -19,7 +19,10 @@
             img#justFrame {border:2px ridge navy; display:block; margin:auto; width:200px; margin-bottom:100px;}
             p {text-align:center;}
             button {width:100px; height:30px; margin-right:20px; margin-left:20px;}
-            
+            div#t5, div#t6, div#t7 {
+              display:none;
+              background-color: aqua;
+            }
             
         </style>
 
@@ -52,10 +55,36 @@
             var myimg;
             myimg = document.getElementById(dre);
             myimg.width= myimg.width+50;
-            myimg.style.boxshadow = "5px 10px 20px 0px magenta";
+            myimg.style.boxShadow = "5px 10px 20px 0px lime";
+            if(dre =="tiger5"){
+              document.getElementById("t5").style.display="block";
+            }
+            else if (dre =="tiger6"){
+              document.getElementById("t6").style.display="block";
+            }
+            else{
+              document.getElementById("t7").style.display="block";
 
+            }
           }
-            
+           function makenormal(andwey){
+            var myimg;
+            myimg = document.getElementById(andwey);
+            myimg.width= myimg.width-50;
+            myimg.style.boxShadow = "none";
+            if(andwey =="tiger5"){
+              document.getElementById("t5").style.display="none";
+            }
+            else if (andwey =="tiger6"){
+              document.getElementById("t6").style.display="none";
+            }
+            else{
+              document.getElementById("t7").style.display="none";
+
+            }
+
+         
+          } 
         
         </script>
         
@@ -75,22 +104,22 @@
         <hr/>
         <h2> Example Situation Two</h2>
         <div class="container">
-          <img id="tiger5" onmouseover="makebig(this.id)" src="tiger5.jpg" alt="Tiger 5" title="Tiger 5" width="200"/>
-          <div>
+          <img id="tiger5" onmouseover="makebig(this.id)" onmouseout="makenormal(this.id)" src="tiger5.jpg" alt="Tiger 5" title="Tiger 5" width="200"/>
+          <div id="t5">
               <h4>Sitting Tiger</h4>
               <p>Tiger Sitting Down and Taking a Breath</p>
           </div>
         </div>   
         <div class="container">
-          <img id="tiger6" onmouseover="makebig(this.id)"src="tiger6.jpg" alt="Tiger 5" title="Tiger 5" width="200"/>
-          <div>
+          <img id="tiger6" onmouseover="makebig(this.id)" onmouseout="makenormal(this.id)" src="tiger6.jpg" alt="Tiger 5" title="Tiger 5" width="200"/>
+          <div id="t6">
             <h4>Standing Tiger</h4>
             <p>Tiger Taking a Walk</p>
         </div>
         </div>   
         <div class="container">
-          <img id="tiger7" onmouseover="makebig(this.id)" src="tiger7.jpg" alt="Tiger 5" title="Tiger 5" width="200"/>
-          <div>
+          <img id="tiger7" onmouseover="makebig(this.id)" onmouseout="makenormal(this.id)" src="tiger7.jpg" alt="Tiger 5" title="Tiger 5" width="200"/>
+          <div id="t7">
             <h4>Crouching Tiger</h4>
             <p>Tiger Crouching</p>
           </div>

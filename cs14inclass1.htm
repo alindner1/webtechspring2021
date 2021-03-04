@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+
+	    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+        <title>Making a Calculator</title>
+        <style type="text/css">
+            form {background-color:silver; color:Navy; font-family:Arial;
+            padding:50px 100px 50px 200px; width:50%;margin:auto;}
+            h1 {text-align:center; font-family: Lucida Handwriting; color:Green;}
+            .a {height:30px;}
+        </style>
+
+        <script type="text/javascript">
+           function showme(math)
+           {
+               var myform,n1, n2;
+               myform=document.getElementById("form");
+               n1=myform.num1.value;
+               n1=parseFloat(n1);
+               n2=myform.num2.value;
+               n2=parseFloat(n2);
+                if (math=="add"){
+                    myres=n1+n2;
+                }
+                else if (math=="sub"){
+                    myres=n1-n2;
+                }
+                else if (math=="mult"){
+                    myres=n1*n2;
+                }
+                else{
+                    myres=n1/n2;
+                }
+            
+               myform.res.value =myres;
+               return false;
+           }
+        
+        
+        </script>
+        
+    </head>
+
+    <body>
+	    <!-- Your HTML goes here -->
+        <h1>Simple Calculator</h1>
+        <form id="form" method="POST" action="">
+            <p>
+                <input class="a" type="text" name="num1" placeholder="Enter.." size="7"/>
+                &nbsp;&nbsp;&nbsp;
+                <input class="a" type="text" name="num2" placeholder="Enter.." size="7"/>
+            </p>
+            <p>
+                Result: &nbsp; <input  class="a" type="text" name="res" placeholder="Show.." size="10"/>
+            </p>
+            <p>
+                Select the background color for the form:&nbsp;
+                <select name="bgcol">
+                    <option value="null">No Color Chosen</option>
+                    <option value="blue">Blue Color</option>
+                    <option value="yellow">Yellow Color</option>
+                    <option value="magenta">Magenta Color</option>
+                </select>
+            </p>
+            <p>
+                <button id="add" onclick="return showme(this.id)" class="a">Add</button> &nbsp;&nbsp; 
+                <button id="sub" onclick="return showme(this.id)" class="a">Subtract</button>&nbsp;&nbsp; 
+                <button id="mult" onclick="return showme(this.id)" class="a">Multiply</button>&nbsp;&nbsp; 
+                <button id="divide" onclick="return showme(this.id)" class="a">Divide</button>
+            </p>
+            
+            
+        </form>
+   
+    
+    </body>
+</html>

@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+	    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+	 <title>Graded Homework #3</title>
+     <style type="text/css">
+        h1 {text-align:center; font-family:Arial; color: Navy;}
+		table {float:left; width:30%; margin-right:100px;}
+		table, td {border:1px solid black;}
+		table img {width:100%;}
+		img#big {width:50%;}
+		h3 { margin-left:50%;}
+		p {font-family:sans-serif; color:navy; margin-right:50px; margin-left:50px; font-size:large;}
+     </style>
+     <Script>
+         function showbig(bigg){
+            var myimg,caption;
+            myimg = document.getElementById("big");
+            caption = document.getElementById("caption");
+
+            if (bigg=="pic1") {
+              myimg.src="alaskaglacier1R.jpg";
+              myimg.alt="alaska1 pic";
+              myimg.title="alaska 1 Rocks";
+              caption.textContent="Alaska 1";
+            }
+            else if (bigg=="pic2") {
+              myimg.src="alaskaglacier2R.jpg";
+              myimg.alt="alaska2 pic";
+              myimg.title="alaska 2 Rocks";
+              caption.textContent="Alaska 2";
+
+            }
+            else if (bigg=="pic3") {
+              myimg.src="alaskaicewallR.jpg";
+              myimg.alt="alaska3 pic";
+              myimg.title="alaska 3 Rocks";
+              caption.textContent="Alaska 3";
+
+            }
+            else{
+              myimg.src="alaskaLakeR.jpg";
+              myimg.alt="alaska4 pic";
+              myimg.title="alaska 4 Rocks";
+              caption.textContent="Alaska 4";
+
+            }
+        }
+        
+     </Script>
+        
+    </head>
+
+    <body>
+	    <!-- Your HTML goes here -->
+        <h1> Picture Gallery with JavaScript </h1>
+ <p> The page below holds a table that has 2 rows and 2 columns,
+ each cell holding an image. Think of this as your thumb-nail view.
+ The table has been floated left. There is another image to the
+ right of the table, that is currently empty and hence you cannot
+ see it. It has an ID of "big" and we will refer to this as the big
+ image. Below the big image is a caption, also empty, and invisible.
+ Write the functionality in Javascript whereby, if you click on a 
+ thumb-nail image, that image is shown as a big image, much like how
+ a picture gallery will work. Make up a different caption for each
+ image and show that caption below the image. <em>Hint: this would require the use of "this.id" as well as the use of conditional 
+ statements. </em>
+ <table>
+ 	<tr>
+     <td> <img src="alaskaglacier1R.jpg" id="pic1" onclick="showbig(this.id)" alt="Alaska 1" title="A1"/> </td>
+     <td> <img src="alaskaglacier2R.jpg" id="pic2" onclick="showbig(this.id)" alt="Alaska 2" title="A2"/> </td>
+    </tr>
+    <tr>
+     <td> <img src="alaskaicewallR.jpg" id="pic3" onclick="showbig(this.id)" alt="Alaska 3" title="A3"/> </td>
+     <td> <img src="alaskaLakeR.jpg"  id="pic4" onclick="showbig(this.id)"alt="Alaska 4" title="A4"/> </td>
+    </tr>
+   </table>
+   
+   <img id="big" src="" alt="" title="" /> <!-- This is the larger image -->
+   <h3 id="caption" ></h3> <!-- This is the image caption -->
+
+   
+   
+
+        
+    </body>
+</html>
