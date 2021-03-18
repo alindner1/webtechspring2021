@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Class 16: Animation with JavaScript</title>
+	
+    <style>
+
+    p, h3 {text-align:center;}
+	img {border-width: 10px; border-style: solid; width:30%;}
+    button {width:150px; height:40px; background-color:green;; font-family:arial; color:yellow;}
+    div#b{text-align:center;}
+	</style>
+    <script type="text/javascript">
+        var ss=new Array("tiger5.jpg", "tiger6.jpg", "tiger8.jpg")
+        var cap = new Array ("this is webtech", "twefw", "ciec")
+        var counter=0;
+        function showSlides()
+        {
+            var myimg;
+            myimg = document.getElementById("daimg");
+            myimg.src = ss[counter];
+            document.getElementById("cap").innerHTML = cap[counter];
+            ++counter;
+            if (counter >ss.length)
+            {
+                counter=0;
+            }
+            setTimeout("showSlides()", 1000);
+        }
+
+
+    </script>
+</head>
+<body onload="showSlides()">
+    <p>
+    
+    <img id="daimg" src="tiger5.jpg" alt="Slide Show of Tigers" title="Tigers"/>
+    
+    </p>
+    <h3 id="cap"></h3>
+    <!-- The above h3 will be used for showing a caption, if needed.-->
+    <div id="b">
+        <button>Click to stop/resume</button>
+    </div>
+     
+</body>
+</html>
