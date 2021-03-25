@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>CS 19 Quiz</title>
+
+	<style>
+	/* Your styles go here */
+	img {border:3px ridge black; padding:15px; display:block; margin:auto; width:50%;}
+	.b {background-color:silver; font-family:Arial; width:100px; height:40px;  margin-top:100px;}
+    p.q {margin:30px 150px; font-family:Arial; color:navy; font-style:italic;}
+    p.c {text-align:center;}
+	</style>
+	
+	<script>
+	/* Your JavaScript goes here */
+	function showme(pic){
+            var myimg;
+            myimg = document.getElementById("image");
+            if (pic=="eagle") {
+              myimg.src="baldeagle.jpg";
+              myimg.alt="eagle";
+              myimg.title="bald eagle";
+            }
+            else if (pic=="lynx") {
+              myimg.src="lynx.jpg";
+              myimg.alt="lynx";
+              myimg.title="Lynx";
+            }
+		}
+	</script>
+
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+    <p class="q">
+        Below is a blank image with two buttons. Write a function in Javascript that shows the image of the 
+        corresponding animal when each button is clicked. 
+    </p>
+
+	<img id="image" src="" alt="The Image Shows Here" title="should change"/>
+
+    <p class="c">
+	        <button  id="eagle" onclick="return showme(this.id)" class="b">Bald Eagle</button> &nbsp;&nbsp;&nbsp; 
+			<button id="lynx" onclick="return showme(this.id)" class="b">Lynx</button>
+    </p>
+	
+  </body>
+</html>

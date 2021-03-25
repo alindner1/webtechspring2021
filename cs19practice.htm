@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+
+<html> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>CS19 - Practice Question</title>
+
+	<style type="text/css">
+	h1, h3 {text-align:center; font-family:Arial; color:Navy;}
+	img {width:300px; height:200px;}
+	p {text-align:center;}
+	button {width:200px; height:50px;}
+	h2 {margin:20px 150px 20px 150px; font-size:small;}
+	</style>
+	
+	<script type="text/javascript">
+	/* Your JavaScript goes here */
+  function showme()
+    {
+        var myform,major, status, gender, color;
+        myform=document.getElementById("form");
+        major=myform.major.value;
+        status=myform.status.value;
+        gender=myform.gender.value;
+        color=myform.fc.value;
+        if ((myform.major.value.length > 0) && (myform.status.value.length > 0) && (myform.gender.value.length > 0))
+        {
+            myres="You are a "+ major+" major and a "+ status+ " that is "+gender+"!";
+            if (color=="red"){
+            myform.style.backgroundColor="red";
+            }
+            else if (color=="aqua"){
+                myform.style.backgroundColor="aqua";
+            }
+            else if (color=="lavender"){
+                myform.style.backgroundColor="lavender";
+            }
+        }
+        else {
+           alert("Please enter all values");
+        }
+
+        myform.result.value =myres;
+        return false;
+    }
+	</script>
+  </head>
+
+  <body>
+    <h1> CS18 - Practice Question</h1>
+    <hr />
+    <h2>Please create the following functionality using the form given below. User will first enter
+    his/her major field of study, his/her status (FR, SO, JR or SR) and his/her gender. Please validate
+    the fields to make sure that none of the fields are blank and that the value entered in gender is one 
+    of either "M" or "F" (in uppercase only). The status must also be one of the 4 values defined. Your
+    may assume it will be in uppercase only - in other words, converting the case is not needed. 
+    Show the data that the user has entered in the text area labeled "Results". Finally, the user will select
+    a color for the form. Set the background color of the form using the selection. All of this must be performed 
+    when the user submits the form using the Show Me button.This will require the use of "return" when you 
+    call the function.
+     </h2>
+    <hr />
+    <h3> Present the Result </h3>
+    <hr />
+    <form id="form" action="" method="POST">
+    <p>
+    &nbsp;Your Major Field of Study: &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="major" size="10" /> 
+    </p>
+    <p>
+    &nbsp;Your Status (FR, SO, JR or SR): &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="status" size="4" /> 
+    </p>
+    <p>
+    Your Gender (M or F only, in uppercase): <input type="text" name="gender" size="4" />  
+    </p>
+    <p>
+    Results: <br /><textarea name="results" rows="3" cols="40"></textarea> 
+    </p>
+    <p>
+      <select name="fc">
+        <option value="null">Select a color</option>
+        <option value="red">Red</option>
+        <option value="aqua">Aqua</option>
+        <option value="lavender">Lavender</option>
+      </select>
+    </p>
+    <p>
+      <input type="submit" onclick="return showme()" name="submit" value="Show Me"/>
+      &nbsp;&nbsp;
+      <input type="reset" name="reset" value="Clear Me"/>
+    </p>
+
+    </form>
+  </body>
+</html>

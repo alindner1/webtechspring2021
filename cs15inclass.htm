@@ -11,6 +11,32 @@
         </style>
 
         <script type="text/javascript">
+            function showme()
+            {
+               var myform, name, age, gender, color, myres;
+               myform=document.getElementById("form");
+               name=myform.name.value;
+               age=myform.age.value;
+               gender=myform.gender.value;
+               color=myform.colors.value;
+                if (color=="green"){
+                    myform.style.backgroundColor="green";
+                    myres="Hi " + name +"! We see you are " + age + " years old and a " + gender + " that likes " + color;
+                }
+                else if (color=="blue"){
+                    myform.style.backgroundColor="blue";
+                    myres="Hi " + name +"! We see you are " + age + " years old and a " + gender + " that likes " + color;
+                }
+                else if (color=="yellow"){
+                    myform.style.backgroundColor="yellow";
+                    myres="Hi " + name +"! We see you are " + age + " years old and a " + gender + " that likes " + color;
+                }
+                else{
+                    myres="Hi " + name +"! We see you are " + age + " years old and a " + gender + " that likes " + color;
+                }
+               myform.result.value = myres;
+               return false;
+           }
             
 
         </script>
@@ -21,7 +47,7 @@
 	    <!-- Your HTML goes here -->
         
         <h1>Processing form inputs</h1>
-        <form action="" method="post">
+        <form id="form" action="" method="post">
             <p>
                 Enter your name: <input type="text" name="name" size="40" /> &nbsp;&nbsp;
                 Enter your age : <input type="text" name="age" size="4" />
@@ -47,7 +73,7 @@
                 <textarea name="result" cols="40" rows="3"></textarea>
             </p>
             <p>
-                <input type="submit" name="submit" value="Show Me" style="width:100px;height:40px" />
+                <input id="show" onclick="return showme(this.id)" type="submit" name="submit" value="Show Me" style="width:100px;height:40px" />
                 &nbsp;&nbsp;
                 <input type="reset" name="reset" value="Clear Me" style="width:100px;height:40px" />
             

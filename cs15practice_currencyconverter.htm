@@ -30,29 +30,27 @@
     <script>
         function showme(math)
            {
-               var myform,n1, n2;
+               var myform, d, y;
                myform=document.getElementById("form");
-               n1=myform.num1.value;
-               n1=parseFloat(n1);
-               n2=myform.num2.value;
-               n2=parseFloat(n2);
-                if (math=="add"){
-                    myres=n1+n2;
+               d=myform.dollar.value;
+               d=parseFloat(d);
+               y=myform.yuan.value;
+               y=parseFloat(y);
+                if (myform.yuan.length==0 && myform.dollar.length>=1){
+                    y=d*.14;
+                    myform.yuan.value =y;
                 }
-                else if (math=="sub"){
-                    myres=n1-n2;
+                else if (myform.dollar.length==0 && myform.yuan.length>=1){
+                    d=y*7.09;
+                    myform.dollar.value=d;               
                 }
-                else if (math=="mult"){
-                    myres=n1*n2;
+                else if (myform.dollar.length==0 && myform.yuan.length==0) {
+                    alert("No input detected! Try again!")
                 }
-                else{
-                    myres=n1/n2;
-                }
-            
-               myform.res.value =myres;
+              
                return false;
            }
-        
+
         
     </script>
 </head>
@@ -69,14 +67,14 @@
         If the user attempts to enter non-numeric values, you must raise an alert. 
         The function must work when the user clicks the CONVERT button.
     </p>
-    <form method="post">
+    <form id="form" method="post">
         <h1> Dollar/Yuan Converter.</h1>
         <h3> Enter any one value to convert to the other. <br />
              Do not enter both values. Use numbers only.
         </h3>
         <p class="tf">
-        Dollars:&dollar;&nbsp;<input type="text" name="d" size="10"/> &nbsp;&nbsp;&nbsp;
-        Yuan:&#20803;&nbsp; <input type="text" name="y" size="10" />
+        Dollars:&dollar;&nbsp;<input type="text"  name="dollar" size="10"/> &nbsp;&nbsp;&nbsp;
+        Yuan:&#20803;&nbsp; <input type="text"  name="yuan" size="10" />
         </p>
         <p class="buttons">
             <input id="convert" onclick="return showme(this.id)" class="a" type="submit" name="submit" value="CONVERT" /> &nbsp;&nbsp;&nbsp;
