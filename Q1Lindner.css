@@ -1,0 +1,57 @@
+h1{
+    font-family: Arial;
+    color: navy;
+    text-align: left;
+}
+    h1#start{
+        background-color: white;
+        margin-right: 1000px;
+    }
+p {
+    font-family: sans-serif;
+    color: olive;
+}
+div#mistyrose {
+    background-color: mistyrose;
+    padding: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+div#silver {
+    background-color: silver;
+    padding: 25px;
+    
+}
+img {
+    width: 30%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    float: right;
+}
+span{
+    font-size: 12px;
+    text-decoration:none;
+
+}
+a {
+    text-decoration: none;
+}
+    a:hover {
+        background-color: yellow;
+    }
+
+ul{
+    text-decoration: none;
+    list-style-type: square;
+    font-family: arial;
+}
+    ul a:hover{
+        background-color: aqua;
+    }
+ol {
+    list-style-type: lower-alpha;
+}
+
