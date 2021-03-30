@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+
+	    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+	    <title>Midterm Exam - Spring 2021 - Q3</title>
+        <style type="text/css">
+            table, td {border: 1px solid black;text-align:center; font-size:medium;}
+            table {margin-right: auto;margin-left: auto;font-family: Arial;color: black;width:80%;}
+            .one {width: 30%;}
+            .two, .tri {width:35%;}
+            button {width: 80px;height: 40px;}
+            p#q {font-family: sans-serif;margin-right: 130px;margin-left: 130px;}
+            h1 {font-family:Arial; font-size:2em; text-align:center;}
+            input.clr {width: 150px;height: 40px;}
+            p#clearbutton {text-align: center;}
+            img {width:10%;}
+        </style>
+       <script>
+          function compute()
+            {
+            var price;
+			 var myf = document.getElementById("f");
+			 
+			 if ((myf.beltq.value.length == 0) && (myf.shoeq.value.length == 0) )
+			 {
+				 alert ("Please enter either a quantity in the Belt section or the Shoe section!");
+			 }
+             else if ((myf.beltq.value.length > 0) && (myf.shoeq.value.length > 0) )
+             {
+                alert ("Please enter either a quantity in the Belt section OR the Shoe section, not both!");
+
+             }
+             else if ((isNaN(myf.beltq.value)) || (isNaN(myf.shoeq.value)) )
+			 {
+				 alert ("Only numerical values are accepted");
+			 }
+
+			 else
+			 {
+                 if ((myf.beltq.value.length > 0) && (myf.shoeq.value.length == 0) )
+                {
+                    price = prompt("How much will you pay? It should be between $12.99 and $39.99.")
+                    if ((39.99> price) && (price>12.99)){
+                        price = parseFloat(price);
+                    }
+                    else {
+                        price = prompt("The price is out of range. How much will you pay? Remember: it should be between $12.99 and $39.99.")
+                    }
+                    myf.beltamount.value = "$ " + (parseFloat(price)*(myf.beltq.value)).toFixed(2);
+                    myf.shoeamount.value = "$ " + (0.00.toFixed(2));
+                    return false;
+                }
+                if ((myf.beltamount.value.length == 0) && (myf.shoeq.value.length > 0) )
+                {
+                    price = prompt("How much will you pay? It should be between $12.99 and $39.99.")
+                    if ((39.99> price) && (price>12.99)){
+                        price = parseFloat(price);
+                    }
+                    else {
+                        price = prompt("The price is out of range. How much will you pay? Remember: it should be between $12.99 and $39.99.")
+                    }
+                    myf.shoeamount.value = "$ " + (parseFloat(price)*(myf.shoeq.value)).toFixed(2);
+                    myf.beltamount.value = "$ " + (0.00.toFixed(2));
+                    return false;
+                }
+
+			 }
+          } 
+       </script>
+
+    </head>
+
+    <body>
+	    <!-- Your HTML goes here -->
+        <h1>Q3 - Fill out the Form (25 points)</h1>
+        <p id="q"> 
+            You are give a table within a form. Read instructions carefully before starting.
+            The first has the product name,the second is the quantity (the user will enter this) and the third, the total amount (your 
+            function needs to compute this and show it). Use Javascript to create a functionality that does the following:<br/><br/>
+            1. The user should enter the quantity in one of the two rows only. If both are entered, alert the user to enter only one. 
+            If neither is entered, alert the user to enter a value in one of the two quantity fields. These two validations are 
+            worth 8 points total. For the other 5 points, validate the quantity for non-numerical values.(<em>This is a little 
+            challenging and please make sure you get the rest working before attempting this part</em>)<br/><br/>
+            2. After entering the quantity, the user will click on the Compute Total button. Please PROMPT the user to enter a price. 
+            Make sure that you validate price for non-numerical values.You may assume that the price field will always be entered (and 
+            hence you do not have to validate it for blank value). But, the acceptable price range is between $12.99 and $39.99. If 
+            any other value is entered, please let the user know. This part is worth 8 points (for the pop up and validations). <br/><br/>
+            3.Use the price and the quantity and compute the total amount and display it in the Amount field corresponding to the product
+            that user has chosen. The amount should be shown with the $ sign. The other Amount field (i.e. for the product NOT chosen,
+            show the amount as $0.00).
+            
+            <em>Remember: You may need the "return function-name" and "return false".</em>
+
+            
+        <form id="f" action="" method="POST">
+        <table>
+            <tr>
+                
+                <td class="one">Product</td>
+                <td class="two">Quantity</td>
+                <td class="tri">Amount</td>
+            </tr>
+            <tr>
+                <td class="one"><p>Belt</p></td>
+                <td class="two"><p><input type="text" name="beltq" size="4" /></p></td>
+                <td class="tri"><p><input type="text" name="beltamount" size="6" /></p></td>
+            </tr>
+             <tr>
+                <td class="one"><p>Shoe</p></td>
+                <td class="two"><p><input type="text" name="shoeq" size="4" /></p></td>
+                <td class="tri"><p><input type="text" name="shoeamount" size="6" /></p></td>
+            </tr>
+        </table>
+            <p id="clearbutton">
+               <input class="clr" onclick="return compute()" type="submit" name="submit" value="COMPUTE TOTAL" /> &nbsp;&nbsp;&nbsp;
+             <input class="clr" type="reset" name="reset" value="CLEAR FORM" />
+                </p>
+        </form>
+    </body>
+</html>
