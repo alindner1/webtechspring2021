@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>CS22-InClass-jQuery</title>
+
+	<style>
+	/* Your styles go here */
+	p#p1{
+		display:none;
+		background-color: lavender;
+		margin-right: 600px;
+	}
+	img{
+		width: 300px;
+		height: 200px;
+		margin-right: 50px;
+	}
+	</style>
+	<script type="text/javascript" src ="http://code.jquery.com/jquery.min.js"></script>
+	<script>
+	/* Your JavaScript goes here API FOR JQUERY BELOW */
+    $(function()
+	{
+		$("h1#h11").click( function() //element you interact with 
+		{
+			$("h2#h22").css("color","red"); //element you change
+		});
+
+		$("h2#h22").click( function() //element you interact with 
+		{
+			$("h2#h23").css({"color":"blue", "text-align":"center", "font-family":"arial"}); //element you change
+		});
+		$("h1#h12").click( function() //element you interact with 
+		{
+			$("h2#h24").css({"color":"pink", "text-align":"center", "font-family":"winter princess", "font-style":"italic"}); //element you change
+		});
+		$("h3#h31").click( function() //element you interact with 
+		{
+			$("h3#h32").toggle(); //element you change
+		});
+		//$("h3#h31").dblclick( function() //element you interact with 
+		//{
+		//	$("h3#h32").show(); //element you change
+		//});
+		$("img").mouseover( function() //element you interact with 
+		{
+			$(this).width(600).height(400); //element you change
+		});
+		$("img").mouseout( function() //element you interact with 
+		{
+			$(this).width(300).height(200); //element you change
+		});
+		$("h2#h25").click( function() //element you interact with 
+		{
+			$(this).removeClass(); //element you change
+			$(this).addClass("red");
+			$("h2#h26").removeClass();
+			$("h2#h26").addClass("green");
+
+		});
+		$("h2#h26").click( function() //element you interact with 
+		{
+			$("h2#h25").removeClass();
+			$("h2#h25").addClass("green");
+			$(this).removeClass(); //element you change
+			$(this).addClass("red");
+
+		});
+	});
+
+	</script>
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+	<h1 id="h11"> Basics of jQuery</h1>
+	<h2 id="h21"> This exercise introduces you to using simple jQuery functions</h2>
+	<h2 id="h22"> It also teaches you the basics of jQuery</h2>
+	<h2 id="h23"3> Just another line</h2>
+
+	<!-- Start Exercise 1 here -->
+	<h1 id="h12"> Start of E1</h1>
+	<h2 id="h24"> This is part of E1</h2>
+
+
+	<!-- Start Exercise 2 here -->
+	<h3 id="h31"> If you click me.... and if you double click me...</h1>
+	<h3 id="h32"> I will disappear... and i will re-appear</h2>
+
+	<!-- Start Exercise 3 Here -->
+	<h1 id="h13">More About Tigers</h1>
+	<p id="p1">
+        In the past, tigers were found throughout Asia, from the Caucasus and the Caspian Sea to Siberia and the Indonesian islands of Java, Bali and Sumatra. 
+        Fossil remains indicate tigers were also present in Borneo and Palawan in the Philippines during the late Pleistocene and Holocene.[74][75]
+        During the 20th century, tigers became extinct in western Asia and were restricted to isolated pockets in the remaining parts of their range. 
+        They were extirpated on the island of Bali in the 1940s, around the Caspian Sea in the 1970s, and on Java in the 1980s. This was the result of 
+        habitat loss and the ongoing killing of tigers and tiger prey. Today, their fragmented and partly degraded range extends from India in the west 
+        to China and Southeast Asia. The northern limit of their range is close to the Amur River in southeastern Siberia. The only large island they 
+        still inhabit is Sumatra.[1] Since the beginning of the 20th century, tigers' historical range has shrunk by 93%. In the decade from 1997 to 2007, 
+        the estimated area known to be occupied by tigers has declined by 41%.[2][76]
+	</p>
+
+	<!-- Start Exercise 4 Here -->
+<img id="t1" src="tiger5.jpg" alt="tiger 5" title="tiger!"/>
+<img id="t2" src="tiger7.jpg" alt="tiger 7" title="tiger 2!"/>
+
+<!--Complete 4 & 5-->
+	<!-- Start Exercise 5 here -->
+	<h2 id="h25"> This is the first</h2>
+	<h2 id="h26"> This is the second</h2>
+
+	<!-- Use the same two images for Exercise 6. -->
+	
+  </body>
+</html>
