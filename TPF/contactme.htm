@@ -71,8 +71,34 @@
 		}
 	</style>
 	
+	<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.validate.js"></script>
 	<script>
 	/* Your JavaScript goes here */
+    $(function() {
+  
+            $("form[name='Contact']").validate({
+   
+                rules: {
+                        fname: {required:true, maxlength:10},
+                        lname: {required:true, minlength:6},
+                        dogorhuman: { required: true},
+						dog: {reqired:true},
+						topic: {reqired:true},
+						comments: {reqired:false}
+
+                        },
+   
+                messages: {
+                        fname: "Please enter your first name (10 char max)",
+                        lname: "Please enter your last name",
+                        email: "Please enter a valid email address"
+                            },
+                submitHandler: function(form) {
+                form.submit();
+                            }                       
+            });
+    });
 	  
 	</script>
   </head>
@@ -114,11 +140,11 @@
 	<form action="mailer.php" method="POST">
 		<br>
         <p id="form">First name:
-            <input type="text" name="firstname" maxlength="100" size="20" value= "Enter first name here" />
+            <input type="text" name="fname" maxlength="100" size="20" value= "Enter first name here" />
         </p>
 		<br>
         <p id="form">Last name:
-            <input type="text" name="lastname" maxlength="100" size="20" value= "Enter last name here" />
+            <input type="text" name="lname" maxlength="100" size="20" value= "Enter last name here" />
         </p>
 		<br>
         <p id="form">Are you a dog or a human:
@@ -139,7 +165,7 @@
 		<br>
         <p id="form">
 			Which is your favorite dog breed:
-			<select name="state">
+			<select name="dog">
 				<option value=""> Select your favorite dog breed</option>
 				<option value="Golden Retriever"> Golden Retriever</option>
 				<option value="Poodle"> Poodle</option>

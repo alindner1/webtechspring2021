@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Class 24: Form Validation</title>
+
+	<style>
+	/* Your styles go here */
+		form{background-color:lightsteelblue; width:40%; margin:auto;
+		padding:20px 200px; font-family:Arial; }
+        button{background-color:Silver; height:30px;}
+	
+	</style>
+	<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.validate.js"></script>
+	<script>
+	/* Your JavaScript goes here */
+    $(function() {
+  
+            $("form[name='Contact']").validate({
+   
+                rules: {
+                        fname: {required:true, maxlength:10},
+                        lname: {required:true, minlength:6},
+                        email: { required: true, email: true},
+                        },
+   
+                messages: {
+                        fname: "Please enter your firstname (10 char max)",
+                        lname: "Please enter your lastname",
+                        email: "Please enter a valid email address"
+                            },
+                submitHandler: function(form) {
+                form.submit();
+                            }                       
+            });
+    });
+	  
+	</script>
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+	<form action="" method="POST" name="Contact">
+			<p>
+				First Name: &nbsp; <input type="text" name="fname" id="fname" size="15" placeholder="Jane"/>
+			</p>
+            <p>
+				Last Name: &nbsp; <input type="text" name="lname" id="lname" size="20" placeholder="Doe"/>
+			</p>
+			<p>
+				Email: &nbsp; <input type="email" name="email" id="email" placeholder="janedoe@gmail.com"/>
+			</p>
+			<button type="submit">Contact Me</button>
+	</form>
+	
+
+	
+	
+  </body>
+</html>
