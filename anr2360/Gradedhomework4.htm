@@ -10,19 +10,14 @@
         h1 {text-align:center; color: Navy; font-family:Arial;}
         p {font-family:cursive, sans-serif, arial; color: navy; margin:20px 100px 20px 100px;}
         
-        </style>
+        </style>    
         <script type="text/javascript" src ="http://code.jquery.com/jquery.min.js"></script>
-        <script>
-        /* Your JavaScript goes here API FOR JQUERY BELOW */
+       <script>
         $(function()
         {
-            /*
-            $("appear").click( function() 
-            {
-                $("appear").toggle(); 
-                delay(3000);
-            });
-        */
+
+/* Part 1 */
+
             $("p#para").mouseover( function() 
             {
                 $(this).css({"color":"yellow", "background-color":"navy"});
@@ -31,40 +26,36 @@
             $("p#para").mouseout( function() 
             {
                 $(this).css({"color":"black", "background-color":"white"});
+/* Part 2 */
 
             });
             $("h#magic").click( function() 
             {
-                $("h#appear").toggle();
+                $("h#appear").delay(3000).fadeToggle();
 
-                /*HOW DO I DELAY THIS AND IS THIS RIGHT?*/
             });
+/* Part 3 */
 
-        $("img#flower").click( function() 
-		{
-			$("img#new").attr("src", "babsonwhiteflowers.jpg"); 
-            $("img#new").attr("title", "Babson's White Flowers"); 
-            $("img#new").attr("alt", "Babson White Flowers"); 
-		});
-		$("img#lights").click( function()  
-		{
-            $("img#new").attr("src", "northendlights.jpg"); 
-            $("img#new").attr("title", "North End Lights");
-            $("img#new").attr("alt", "North End's Lights");  		
-        });
+            $("img#flower").click( function() 
+            {
+                $("img#new").attr("src", "babsonwhiteflowers.jpg"); 
+                $("img#new").attr("title", "Babson's White Flowers"); 
+                $("img#new").attr("alt", "Babson White Flowers"); 
+            });
+            $("img#lights").click( function()  
+            {
+                $("img#new").attr("src", "northendlights.jpg"); 
+                $("img#new").attr("title", "North End Lights");
+                $("img#new").attr("alt", "North End's Lights");  		
+            });
 
         });
 
         </script>
-        <!-- Make sure you add the link to the external jquery library, jquery.min.js, here -->
-
-        <!-- Make sure you add the script tag here and add the $(function(){}) here. You would need
-        this to write the jQuery functions to complete this homework. -->
         
     </head>
 
     <body>
-	    <!-- Your HTML goes here -->
         <h1> Homework 4 - jQuery </h1>
         <p id="para" style="border:2px solid black"> This is a paragraph. Use jQuery to create the 
             functionality whereby when you mouse over the paragraph it changes the font to yellow and the
@@ -76,7 +67,7 @@
             If you click on Magic again, "Appear" should appear. Use jQuery to complete this. Set the 
             time elapsed to 3000 microseconds.
         </p>
-        <h2> <h id="appear">Appear! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </h><h id="magic">Magic!!!</2></h2>
+        <h2> <h id="appear">Appear! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </h><h id="magic">Magic!!!</h></h2>
         <hr/>
         
         <p> Please use jQuery to create a functionality whereby if you click on any of the two thumbnail
