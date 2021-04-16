@@ -74,31 +74,22 @@
 	<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
     <script type="text/javascript" src="jquery.validate.js"></script>
 	<script>
-	/* Your JavaScript goes here */
-    $(function() {
-  
-            $("form[name='Contact']").validate({
-   
-                rules: {
-                        fname: {required:true, maxlength:10},
-                        lname: {required:true, minlength:6},
-                        dogorhuman: { required: true},
-						dog: {reqired:true},
-						topic: {reqired:true},
-						comments: {reqired:false}
-
-                        },
-   
-                messages: {
-                        fname: "Please enter your first name (10 char max)",
-                        lname: "Please enter your last name",
-                        email: "Please enter a valid email address"
-                            },
-                submitHandler: function(form) {
-                form.submit();
-                            }                       
-            });
-    });
+  function showme()
+    {
+        var myform, fname, lname, dogorhuman, topic, dog;
+        myform=document.getElementById("myform");
+        fname=myform.fname.value;
+        lname=myform.lname.value;
+        dogorhuman=myform.dogorhuman.value;
+        topic=myform.topic.value;
+		dog=myform.dog.value;
+        if ((myform.fname.value.length > 0) && (myform.lname.value.length > 0) )
+        {
+            myres="Welcome "+ fname+" "+ lname + ", the "+ dogorhuman+ " and "+dog+" lover! I see you want to talk, and I'll touch base with you soon";
+		}
+		myform.result.value =myres;
+        return false;
+    }
 	  
 	</script>
   </head>
@@ -135,9 +126,9 @@
 		She’s pretty ok I guess, she sometimes answers her emails and such, she just tries to cuddle and snuggle me too much. Avoid her irl but email her if you need me. 
 		<br>
 	</p>
-	<p id="form" > <strong>Fill out the form below to contact Andrea. </strong></p>
+	<p id="form"> <strong>Fill out the form below to contact Andrea. </strong></p>
 	<br>
-	<form action="mailer.php" method="POST">
+	<form id="myform" action="" method="POST">
 		<br>
         <p id="form">First name:
             <input type="text" name="fname" maxlength="100" size="20" value= "Enter first name here" />
@@ -182,9 +173,13 @@
             <br>
         <textarea name="comments" rows="5" cols="50"></textarea>
         </p>
+		<p id = "form"> Results:
+			<br>
+			<textarea name="result" rows="3" cols="40"></textarea> 
+		</p>
 		<br>
         <p id="form">
-			<input type="submit" value="Submit" name="Submit"/>
+			<input type="submit" onclick="return showme()" value="Submit" name="Submit"/>
 			<input type="reset" value="Reset" name="Reset"/>
         </p>
 		<br>
