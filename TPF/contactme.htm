@@ -97,6 +97,13 @@
         {
             myres="Welcome "+ fname+" "+ lname + ", the "+ dogorhuman+ " and "+dog+" lover! I see you want to talk, and I'll touch base with you soon";
 		}
+		if ((myform.fname.value == "Enter first name here") || (myform.lname.value= "Enter last name here") || (myform.dog.value= "Select your favorite dog breed"))
+        {
+            alert("Please enter all of the parts of this form!");
+			myres="Please enter all parts of this form!";
+
+		}
+
 		myform.result.value =myres;
         return false;
     }

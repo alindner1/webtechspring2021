@@ -51,27 +51,26 @@
 	<script type="text/javascript">
 
 	function changepic(){
-		var myimage, myinput;
+				var myimage, myinput;
                 myimage = document.getElementById("change");
                 myinput = prompt("Please enter either wilton or waveny");
-                alert(myinput)
                 if (myinput.toLowerCase() == "wilton")
                 {
                 myimage.src = "tootooonfrontlawn.jpg";
                 myimage.title = "Wilton";
                 myimage.alt= "Me in Wilton";
-				myimage.style.width="300px"
+				myimage.style.width="300px";
+
                 }    
                 if (myinput.toLowerCase() == "waveny")
                 {
                 myimage.src = "tootooandmandaatwaverly.jpg";
                 myimage.title = "Waveny";
                 myimage.alt= "Me and my human at Waveny Park";
-				myimage.style.width="300px"
+				myimage.style.width="300px";
                 }    
                 else { 
 					myinput = prompt("Please enter either wilton or waveny");
-                    alert(myinput)
                 }      
             }     
 	</script>
