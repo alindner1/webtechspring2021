@@ -14,7 +14,7 @@
 			text-decoration: none;
 		}
 		p {
-			text-align: left;
+			text-align: center;
 			Color: darkblue;
 		}
 		h1 {
@@ -69,6 +69,16 @@
 			text-align: center;
 			color: darkblue;
 		}
+		p img#secr{
+			text-align: center;
+			border-width: 5px;
+			border-style: solid;
+			border-color: lightblue;
+			width: 300px;
+			margin:auto;
+			margin-left:300px;
+		}
+
 	</style>
 	
 	<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
@@ -90,7 +100,21 @@
 		myform.result.value =myres;
         return false;
     }
-	  
+	function changethispic(){
+            var myimage;
+            myimage = document.getElementById("secr");
+            if(myimage.src.match("meandtootoo")=="meandtootoo"){
+                myimage.src = "tootoobirthdaycake.jpg";
+                myimage.title = "Let's Celebrate Me!";
+                myimage.alt= "Let's celebrate me"; 
+            }
+            else{
+                myimage.src = "meandtootoo.jpg";
+                myimage.title = "Me and my secretary";
+                myimage.alt= "Me and my secretary"; 
+            }
+        
+	}
 	</script>
   </head>
 
@@ -120,10 +144,7 @@
 		I’m pretty famous, so I don’t have a personal contact line. 
 		<br>
 		<br>
-		If you need to contact me or want an autograph/picture (it aint cheap), reach out to my personal assistant and one of my least favorite humans, Andrea. 
-		<br>
-		<br>
-		She’s pretty ok I guess, she sometimes answers her emails and such, she just tries to cuddle and snuggle me too much. Avoid her irl but email her if you need me. 
+		If you need to contact me or want an autograph/picture (it aint cheap), reach out to my personal assistant and one of my least favorite humans, Andrea. She’s pretty ok I guess, she sometimes answers her emails and such, she just tries to cuddle and snuggle me too much. Avoid her irl but email her if you need me. 
 		<br>
 	</p>
 	<p id="form"> <strong>Fill out the form below to contact Andrea. </strong></p>
@@ -197,22 +218,11 @@
 	<hr>
 	<br>
 	<br>
-	<table>
-		<tr> 
-			<td >Me with my human secretary 👉 </td>
-			<br>
-			<td><img src="meandtootoo.jpg" width=250px alt="Me and Human" Title="Me and my human"/></td>
-		</tr>
-	</table>
-	<br>
-	<br>
-	<table>
-		<tr> 
-			<td><img src="tootoobirthdaycake.JPG" width=250px alt="Tootoo!" Title="Tootoo's cake"/></td>
-			<br>
-			<td > 👈 Me being all handsome nbd</td>
-		</tr>
-	</table>
+	<p>
+		<img id="secr" onclick="changethispic()" src="meandtootoo.jpg" alt="Me and Human" Title="Me and my human"/>
+		Click the pic to see the real star of this website!
+	</p>
+
   </body>
 </html>
 

@@ -37,11 +37,43 @@
 			color:darkblue;
 			text-align: center;
 		}
+		p img#change{
+			border: blue;
+			border-width: 2px;
+			border-style: solid;
+			margin:auto;
+			color: navy;
+			background-color: lightblue;
+			text-align: center;
+		}
 	</style>
 	
-	<script>
-	/* Your JavaScript goes here */
-	  
+	<script type="text/javascript">
+
+	function changepic(){
+		var myimage, myinput;
+                myimage = document.getElementById("change");
+                myinput = prompt("Please enter either wilton or waveny");
+                alert(myinput)
+                if (myinput.toLowerCase() == "wilton")
+                {
+                myimage.src = "tootooonfrontlawn.jpg";
+                myimage.title = "Wilton";
+                myimage.alt= "Me in Wilton";
+				myimage.style.width="300px"
+                }    
+                if (myinput.toLowerCase() == "waveny")
+                {
+                myimage.src = "tootooandmandaatwaverly.jpg";
+                myimage.title = "Waveny";
+                myimage.alt= "Me and my human at Waveny Park";
+				myimage.style.width="300px"
+                }    
+                else { 
+					myinput = prompt("Please enter either wilton or waveny");
+                    alert(myinput)
+                }      
+            }     
 	</script>
   </head>
 
@@ -69,18 +101,11 @@
         Favorite Spots!
     </h1>
 	<p>
-		One of my biggest past times is lounging around in the house, going for walks, and visiting places around my area. 
+		One of my biggest past times is lounging around in the house, going for walks, and visiting places around my area. Every Wednesday and every weekend, my humans take me out on new adventures. We go to dog parks and walk around. I love to sniff other doggies' butts and smell trees and pee on trees oh my!
 		<br>
+		I know the HOTTEST places around town, so I figured I'd help you all out. I wanted to give all my fans a list of my favorite spots! Scroll down to get some good ideas (and my reviews of them) of where to hang out in my area!
 		<br>
-		Every Wednesday and every weekend, my humans take me out on new adventures. We go to dog parks and walk around. I love to sniff other doggies' butts and smell trees and pee on trees oh my!
-		<br>
-		<br>
-		I know the HOTTEST places around town, so I figured I'd help you all out.
-		<br>
-		<br>
-		I wanted to give all my fans a list of my favorite spots! Scroll down to get some good ideas (and my reviews of them) of where to hang out in my area!
-		<br>
-		<br>
+
 		You can also find a map below showing my favorite locations and if you click the blue boxes you can go to their websites!
 	</p>
 	<p id="hotspots">
@@ -95,9 +120,12 @@
 	
 	<h3>
 		These are some of my favorite spots! 
-		<br>
-		<br>
-		Click the links below to see some cool pictures of me at these places and hear what I like about these places!
+	</h3>
+	<p>
+	<img id="change" onclick="changepic()" src="" title="" alt="Click me to see pictures of these places"/>
+	</p>
+	<h3>
+		Click the links below to hear what I like about these places!
 	</h3>
 	<p>
 		<a href="wilton.htm">Wilton (home)</a>

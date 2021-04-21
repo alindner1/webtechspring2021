@@ -40,6 +40,18 @@
 			text-align: center;
 		}
 	</style>
+	 <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+	 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	 <script type="text/javascript" src="jquery.arctext.js"></script>
+	 <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+	 <script type="text/javascript">
+	 $(function(){
+		 $("h1#about").click(function(){
+			 $(this).arctext({radius:200, dir:1});
+
+		 })
+	 });
+	 </script>
 	<script>
 	function changeImg(){
 		var myimage;
@@ -77,7 +89,7 @@
 		<a href="credits.htm">Credits</a>
 
 	</div>
-	<h1> 
+	<h1 id="about"> 
 		About Me!
 	</h1>
     <p>
@@ -96,6 +108,7 @@
 		If you are a dog, sit and stay! If you are a human, you can sit and stay and learn what your dogs want to do and what toys they should be given (you're welcome!).
 		<br>
 		<br>
+		BTW if you click about me, it arcs - pretty darn cool huh? I may only be a little pup, but I'm a pup who codes!!!
 	</p>
 <p>	
 	<img id = "img" src="tootoocloseup.JPG" onmouseover="changeImg()" onmouseout="changeBack()" alt="Me" Title="Me"/>
